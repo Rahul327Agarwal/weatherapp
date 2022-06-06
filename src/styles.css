@@ -85,3 +85,13 @@ img
 p{
     margin:0;
 }
+
+#p5
+{
+    color:red;
+    font-size: 50px;
+    text-align: center;
+    background-color: aqua;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}

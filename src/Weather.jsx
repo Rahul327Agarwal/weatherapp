@@ -1,25 +1,44 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./styles.css";
 
 const img = ['https://cdn4.iconfinder.com/data/icons/the-weather-is-nice-today/64/weather_3-128.png'];
+var count = 0;
 
 export default function Weather(props) {
   const [data,setData]=useState([]);
+  
   const days=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-  const get_data = () => {
+  const getdata = () => {
     fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${props.city},IN,&appid=20446fec3e0b927fa20f195317b85afa`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${props.city},IN,&appid=21d256e01e1b269ac757e04a679861d7`
     )
-      .then((res) => res.json())
-      .then((data) => {setData(data.list);});
+      .then((res) => {
+          if(res.status===200)
+          return res.json();
+          else
+          {
+            //  alert("please enter right city name");
+            let data={}; 
+            data.list=[];
+            return data;
+          }
+          
+        })
+        .then((data) => { console.log("hi i m ", data.list); setData(data.list)}
+      );
   };
 
-    get_data();
+    useEffect(()=>{
+        getdata();
+        count=1;
+    },[props])
+    
  
   return <div className="App">
     <div id="weather_div">
-        
-    {data.map((item)=>{
+
+     {data.length===0 && count===1 && <p id="p5">Please enter the right city name</p>}  
+    {data.length>0 && data.map((item)=>{
         const curr_date=item.dt_txt.split(" ");
         const date=curr_date[0];
         var time=parseInt(curr_date[1].split(":")[0]);
