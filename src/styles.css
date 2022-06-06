@@ -1,0 +1,87 @@
+#weather_div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    width:80%;
+    margin: auto;
+}
+
+#div1
+{
+    /* border:1px solid red; */
+    margin:4px;
+    padding:5px;
+    background-color: #808080;
+        
+}
+
+body
+{
+    background-image:url("https://img.freepik.com/free-photo/black-clouds-before-storm_35691-2480.jpg?w=740");
+    background-repeat: no-repeat;
+    /* width:100%; */
+    background-size: cover;
+}
+
+h1
+{
+    color:aqua;
+}
+
+input
+{
+    width:30%;
+    height:32px;
+    margin:10px;
+    border-radius: 10px;
+    border:10px solid greenyellow ;
+    outline :5px solid aquamarine;
+    outline-offset:-5px;
+}
+
+button
+{
+        width: 15%;
+        height: 32px;
+        margin: 10px;
+        color:brown;
+        font-size: medium;
+        font-family:Fantasy;
+        
+}
+
+h2
+{
+    color:bisque
+}
+
+#p1
+{
+    font-size: 15px;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#p2 {
+    font-size: 25px;
+    color: white
+}
+
+#p3 {
+    font-size: 25px;
+    color: white
+}
+
+#p4 {
+    font-size: 15px;
+    color: white
+}
+
+img
+{
+    width:55px;
+}
+
+p{
+    margin:0;
+}
