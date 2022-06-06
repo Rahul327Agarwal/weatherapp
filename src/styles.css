@@ -9,14 +9,14 @@
 {
     margin:7px;
     padding:5px;
-    background-color: #6b6a6a;   
+    background-color: #6b6a6a; 
+    border-radius: 20%;  
 }
 
 body
 {
     background-image:url("https://img.freepik.com/free-photo/black-clouds-before-storm_35691-2480.jpg?w=740");
     background-repeat: no-repeat;
-    /* width:100%; */
     background-size: cover;
 }
 
